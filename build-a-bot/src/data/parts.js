@@ -1,4 +1,4 @@
-const images = require.context('./images', true, /\.png$/)
+const images = require.context('./images', true, /\.png$/);
 
 const parts = {
   heads: [
@@ -9,7 +9,7 @@ const parts = {
       title: 'Large Cyclops',
       src: images('./head-big-eye.png'),
       type: 'heads',
-      cost: 1225.5
+      cost: 1225.5,
     },
     {
       id: 2,
@@ -18,7 +18,7 @@ const parts = {
       src: images('./head-friendly.png'),
       cost: 945.0,
       type: 'heads',
-      onSale: true
+      onSale: true,
     },
     {
       id: 3,
@@ -27,7 +27,7 @@ const parts = {
       title: 'Shredder',
       src: images('./head-shredder.png'),
       type: 'heads',
-      cost: 1275.5
+      cost: 1275.5,
     },
     {
       id: 4,
@@ -36,7 +36,7 @@ const parts = {
       title: 'Small Cyclops',
       src: images('./head-single-eye.png'),
       type: 'heads',
-      cost: 750.0
+      cost: 750.0,
     },
     {
       id: 5,
@@ -45,8 +45,8 @@ const parts = {
       title: 'Surveillance Bot',
       src: images('./head-surveillance.png'),
       type: 'heads',
-      cost: 1255.5
-    }
+      cost: 1255.5,
+    },
   ],
   arms: [
     {
@@ -55,7 +55,7 @@ const parts = {
       title: 'Articulated',
       src: images('./arm-articulated-claw.png'),
       type: 'arms',
-      cost: 275
+      cost: 275,
     },
     {
       id: 2,
@@ -63,7 +63,7 @@ const parts = {
       title: 'Two Clawed',
       src: images('./arm-dual-claw.png'),
       type: 'arms',
-      cost: 285
+      cost: 285,
     },
     {
       id: 3,
@@ -71,7 +71,7 @@ const parts = {
       title: 'Grabber',
       src: images('./arm-grabber.png'),
       type: 'arms',
-      cost: 205.5
+      cost: 205.5,
     },
     {
       id: 4,
@@ -80,7 +80,7 @@ const parts = {
       src: images('./arm-propeller.png'),
       type: 'arms',
       cost: 230,
-      onSale: true
+      onSale: true,
     },
     {
       id: 5,
@@ -88,8 +88,8 @@ const parts = {
       title: 'Stubby Claw',
       src: images('./arm-stubby-claw.png'),
       type: 'arms',
-      cost: 125
-    }
+      cost: 125,
+    },
   ],
   torsos: [
     {
@@ -98,7 +98,7 @@ const parts = {
       title: 'Flexible Gauged',
       src: images('./torso-flexible-gauged.png'),
       type: 'torsos',
-      cost: 1575
+      cost: 1575,
     },
     {
       id: 2,
@@ -106,7 +106,7 @@ const parts = {
       title: 'Gauged',
       src: images('./torso-gauged.png'),
       type: 'torsos',
-      cost: 1385
+      cost: 1385,
     },
     {
       id: 3,
@@ -115,8 +115,8 @@ const parts = {
       src: images('./torso-pouch.png'),
       type: 'torsos',
       cost: 785,
-      onSale: true
-    }
+      onSale: true,
+    },
   ],
   bases: [
     {
@@ -125,7 +125,7 @@ const parts = {
       title: 'Double Wheeled',
       src: images('./base-double-wheel.png'),
       type: 'bases',
-      cost: 895
+      cost: 895,
     },
     {
       id: 2,
@@ -133,7 +133,7 @@ const parts = {
       title: 'Rocket',
       src: images('./base-rocket.png'),
       type: 'bases',
-      cost: 1520.5
+      cost: 1520.5,
     },
     {
       id: 3,
@@ -141,7 +141,7 @@ const parts = {
       title: 'Single Wheeled',
       src: images('./base-single-wheel.png'),
       type: 'bases',
-      cost: 1190.5
+      cost: 1190.5,
     },
     {
       id: 4,
@@ -149,7 +149,7 @@ const parts = {
       title: 'Spring',
       src: images('./base-spring.png'),
       type: 'bases',
-      cost: 1190.5
+      cost: 1190.5,
     },
     {
       id: 5,
@@ -157,8 +157,9 @@ const parts = {
       title: 'Triple Wheeled',
       src: images('./base-triple-wheel.png'),
       type: 'bases',
-      cost: 700.5
-    }
-  ]
-}
-export default parts
+      cost: 700.5,
+    },
+  ],
+};
+
+export default parts;
