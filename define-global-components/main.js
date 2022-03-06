@@ -6,6 +6,8 @@ import HomePage from './components/HomePage.vue';
 
 const app = createApp(App).mount('#app');
 app.component('HomePage', HomePage); // This component now registered globally
+// first parmeter is the name of the component or the HTML element name that i want to use to render this component in other components.
+// second paremeter is the component itself
 
 /*
 Global variables inevitably cause problems because they can be hard to locate
