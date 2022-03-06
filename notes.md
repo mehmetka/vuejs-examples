@@ -1,4 +1,4 @@
-# Incategorized notes:
+# Uncategorized notes:
 
 ## .vue file structure
 There are typically three sections in .vue file:
