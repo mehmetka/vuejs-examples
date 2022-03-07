@@ -1,5 +1,10 @@
 # Uncategorized notes:
 
+## Install vue-cli
+```bash
+$ npm install -g @vue/cli@4.5.13
+```
+
 ## .vue file structure
 There are typically three sections in .vue file:
 
@@ -21,10 +26,8 @@ There are typically three sections in .vue file:
 - Template and Script sections are required. Style section is optional
 - No browser is going to be able to render a file like this. ".vue" files are compiled by webpack at build time to generate HTML, Javascript and CSS files that the browser can work with.
 
-Source: [Vue.js Fundamentals By Jim Cooper](https://app.pluralsight.com/library/courses/vuejs-fundamentals)
-
 ## Using Shorthand Bindings
-use colon(:) instead of typing v-bind -> v-bind:src= -> :src=
+use colon(:) instead of typing v-bind -> v-bind:src= -> :src=  
 use @ instead of typing v-on: -> v-on:click -> @click=
 
 ## Performance
