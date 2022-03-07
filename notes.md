@@ -26,3 +26,10 @@ Source: [Vue.js Fundamentals By Jim Cooper](https://app.pluralsight.com/library/
 ## Using Shorthand Bindings
 use colon(:) instead of typing v-bind -> v-bind:src= -> :src=
 use @ instead of typing v-on: -> v-on:click -> @click=
+
+## Performance
+We can add a v-once tag to any element 
+```vue
+<div v-once class="robot-name">{{selectedRobot.head.title}}</div>
+```
+When you do this, any bindings inside that element will be evaluated once and then never again (if you dont expect the data to change)
