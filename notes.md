@@ -36,3 +36,6 @@ We can add a v-once tag to any element
 <div v-once class="robot-name">{{selectedRobot.head.title}}</div>
 ```
 When you do this, any bindings inside that element will be evaluated once and then never again (if you dont expect the data to change)
+
+## v-show
+It adds ```style="display:none;"```

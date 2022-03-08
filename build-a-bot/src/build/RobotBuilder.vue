@@ -3,7 +3,7 @@
     <div class="top-row">
       <div class="top part">
         <div class="robot-name">{{selectedRobot.head.title}}
-          <span v-if="selectedRobot.head.onSale" class="sale">Sale!</span>
+          <span v-show="selectedRobot.head.onSale" class="sale">Sale!</span>
         </div>
         <img :src="selectedRobot.head.src" title="head" alt="" />
         <button @click="selectPreviousHead()" class="prev-selector">&#9668;</button>
