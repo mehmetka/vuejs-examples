@@ -39,3 +39,9 @@ When you do this, any bindings inside that element will be evaluated once and th
 
 ## v-show
 It adds ```style="display:none;"```
+
+## v-if
+It removes the element completely from the DOM.
+
+## When should we use v-if and when should we use v-show?
+If the content that you are showing and hiding is expensive to generate and it's going to be shown and hiddden frequently then you should use v-show.
