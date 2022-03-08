@@ -45,3 +45,11 @@ It removes the element completely from the DOM.
 
 ## When should we use v-if and when should we use v-show?
 If the content that you are showing and hiding is expensive to generate and it's going to be shown and hiddden frequently then you should use v-show.
+
+## Initializing data() fields
+It's important that we initialized this variable in the data function. If we don't do it here, Vue won't notice that the data is changing. Vue's change detection works by hooking into the getters and setters of properties in the data function. 
+So any data that you are going to want to bind to that's going to change, you need to make sure to initialize it in the data function. Otherwise, Vue won't be able to notice when it's changing.
+
+## Performance warning
+You should never use v-if and v-for **on the same element**.  
+Vue doc ref: https://v2.vuejs.org/v2/guide/conditional.html#v-if-with-v-for
