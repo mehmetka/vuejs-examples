@@ -2,7 +2,10 @@
   <div class="content">
     <button class="add-to-cart" @click="addToCart()">Add to cart</button>
     <div class="top-row">
-      <div class="top part" :style="headBorderStyle">
+      <div class="top part" :class="{'sale-border': selectedRobot.head.onSale}">
+      <!-- class binding is an object where the keys are the names of the classes
+      that you'd like to toggle. Apply sale-border class when
+      selectedRobot.head.onSale is true. -->
         <div class="robot-name">{{selectedRobot.head.title}}
           <span v-show="selectedRobot.head.onSale" class="sale">Sale!</span>
         </div>
@@ -84,11 +87,11 @@ export default {
     };
   },
   computed: {
-    headBorderStyle() {
-      return {
-        border: this.selectedRobot.head.onSale ? '3px solid red' : '3px solid #aaa',
-      };
-    },
+    // headBorderStyle() {
+    //   return {
+    //     border: this.selectedRobot.head.onSale ? '3px solid red' : '3px solid #aaa',
+    //   };
+    // },
     selectedRobot() {
       return {
         head: availableParts.heads[this.selectedHeadIndex],
@@ -273,7 +276,7 @@ export default {
   width: 100%;
 }
 .sale {
-  color: red;;
+  color: red;
 }
 .content {
   position: relative;
@@ -292,5 +295,8 @@ td th {
 }
 .cost {
   text-align: right;
+}
+.sale-border {
+  border: 3px solid red;
 }
 </style>
