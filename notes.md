@@ -53,3 +53,6 @@ So any data that you are going to want to bind to that's going to change, you ne
 ## Performance warning
 You should never use v-if and v-for **on the same element**.  
 Vue doc ref: https://v2.vuejs.org/v2/guide/conditional.html#v-if-with-v-for
+
+## Using SASS
+Install ```npm install node-sass sass-loader --save-dev``` and add ```lang="scss"``` to "style" element.
