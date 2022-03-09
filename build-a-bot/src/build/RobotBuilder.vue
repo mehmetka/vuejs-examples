@@ -2,7 +2,7 @@
   <div class="content">
     <button class="add-to-cart" @click="addToCart()">Add to cart</button>
     <div class="top-row">
-      <div class="top part" :class="[saleBorderClass]">
+      <div :class="[saleBorderClass, 'top', 'part']">
       <!-- Notes for type 1:
       class binding is an object where the keys are the names of the classes
       that you'd like to toggle. Apply sale-border class when
