@@ -2,8 +2,9 @@
   <div class="content">
     <button class="add-to-cart" @click="addToCart()">Add to cart</button>
     <div class="top-row">
-      <div class="top part" :class="{'sale-border': selectedRobot.head.onSale}">
-      <!-- class binding is an object where the keys are the names of the classes
+      <div class="top part" :class="[saleBorderClass]">
+      <!-- Notes for type 1:
+      class binding is an object where the keys are the names of the classes
       that you'd like to toggle. Apply sale-border class when
       selectedRobot.head.onSale is true. -->
         <div class="robot-name">{{selectedRobot.head.title}}
@@ -92,6 +93,9 @@ export default {
     //     border: this.selectedRobot.head.onSale ? '3px solid red' : '3px solid #aaa',
     //   };
     // },
+    saleBorderClass() {
+      return this.selectedRobot.head.onSale ? 'sale-border' : '';
+    },
     selectedRobot() {
       return {
         head: availableParts.heads[this.selectedHeadIndex],
