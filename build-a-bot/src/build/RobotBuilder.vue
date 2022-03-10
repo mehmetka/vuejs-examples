@@ -89,6 +89,8 @@ export default {
     };
   },
   mixins: [createdHookMixin], // this mixin can be used in multiple components
+  // you can use a mixin to share any component option across multiple components
+  // including lifecycle hooks, props, computed properties etc.
   computed: {
     // headBorderStyle() {
     //   return {
