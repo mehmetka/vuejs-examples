@@ -63,6 +63,7 @@
 
 <script>
 import availableParts from '../data/parts';
+import createdHookMixin from './created-hook-mixin';
 
 function getPreviousValidIndex(index, length) {
   const deprecatedIndex = index - 1;
@@ -76,9 +77,6 @@ function getNextValidIndex(index, length) {
 
 export default {
   name: 'RobotBuilder',
-  created() {
-    console.log('component created');
-  },
   data() {
     return {
       availableParts,
@@ -90,6 +88,7 @@ export default {
       selectedBaseIndex: 0,
     };
   },
+  mixins: [createdHookMixin], // this mixin can be used in multiple components
   computed: {
     // headBorderStyle() {
     //   return {
