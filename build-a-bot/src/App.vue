@@ -1,19 +1,22 @@
 <template>
-  <header>
+  <!-- <header>
     Header
-  </header>
+  </header> -->
   <main>
-    <RobotBuilder />
+    <!-- <RobotBuilder /> -->
+    <SearchComponent />
   </main>
 </template>
 
 <script>
-import RobotBuilder from './build/RobotBuilder.vue';
+// import RobotBuilder from './build/RobotBuilder.vue';
+import SearchComponent from './search/SearchComponent.vue';
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-    RobotBuilder,
+    // RobotBuilder,
+    SearchComponent,
   },
 };
 </script>
