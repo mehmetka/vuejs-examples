@@ -56,3 +56,62 @@ Vue doc ref: https://v2.vuejs.org/v2/guide/conditional.html#v-if-with-v-for
 
 ## Using SASS
 Install ```npm install node-sass sass-loader --save-dev``` and add ```lang="scss"``` to "style" element.
+
+## Reactivity
+- Basically refers to Vue's ability to notice and react to data changes in our app  
+
+Variables in setup function are not automatically wrapped in reactivity
+- reactive() -> make objects reactive, it cannot be used to make primitive reactive.
+- ref() -> can be used to make objects or primitives reactive
+- computed() -> used to execute functions when any of the values in the funciton dependencies change.
+
+## Reactivity Example:
+Not reactive:
+```vue
+<template>
+    Count: {{ count }}
+    <button @click="increment()">Increment Count</button>
+</template>
+
+<script>
+export default {
+    setup(props) {
+        let count = 0;
+
+        const increment = () => count = count + 1; // count is a primitive
+
+        return {
+            count,
+            increment,
+        }
+    }
+}
+</script>
+```
+
+Reactive Example:
+```vue
+<template>
+    Count: {{ count }}
+    <button @click="increment()">Increment Count</button>
+</template>
+
+<script>
+import { ref } from 'vue';
+export default {
+    setup(props) {
+        let count = ref(0);
+
+        const increment = () => count.value = count.value + 1; // count is an object not a primitive.
+
+        return {
+            count,
+            increment,
+        }
+    }
+}
+</script>
+```
+
+## Difference of ref and reactive
+When we use "ref()" to make things reactive, we have to use ".value" (like above), but we don't have to for "reactive()"
