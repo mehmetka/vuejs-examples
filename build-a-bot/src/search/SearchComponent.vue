@@ -1,6 +1,8 @@
 <template>
   <div>
     <div>
+      <!-- Whenever the user types something in the search box,
+      call search function from useSearch composition -->
       <input
         placeholder="Enter Search Term"
         @input="search($event.target.value)"
@@ -39,8 +41,10 @@ import { computed } from 'vue';
 import useSearch from './useSearch';
 import useFilters from './useFilters';
 import usePagination from './usePagination';
+// three composition functions
 
 export default {
+  // clue that this component is using the composition API.
   setup(props) {
     const { searchResults, search } = useSearch(props.searchTerm);
 
@@ -64,7 +68,8 @@ export default {
 
     return {
       pagedResults,
-      search,
+      search, // function is being returned so that template can access it. ->
+      // @input="search($event.target.value)" input event bound to search function.
       filters,
       applyFilters,
       clearFilters,

@@ -4,7 +4,10 @@ import parts from '../data/parts';
 const allParts = [...parts.heads, ...parts.arms, ...parts.torsos, ...parts.bases];
 
 export default function useSearch(originalSearchTerm) {
-  const results = ref([]);
+  // the composition function is only executed once, 
+  // so this will execute when the component first calls our composition function
+  // when it's first loading. 
+  const results = ref([]); // using ref to make reactive.
 
   const searchInventory = (searchTerm) => {
     let searchResults;
