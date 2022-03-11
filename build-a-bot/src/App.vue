@@ -3,20 +3,20 @@
     Header
   </header> -->
   <main>
-    <!-- <RobotBuilder /> -->
-    <SearchComponent />
+    <RobotBuilder />
+    <!-- <SearchComponent /> -->
   </main>
 </template>
 
 <script>
-// import RobotBuilder from './build/RobotBuilder.vue';
-import SearchComponent from './search/SearchComponent.vue';
+// import SearchComponent from './search/SearchComponent.vue';
+import RobotBuilder from './build/RobotBuilder.vue';
 
 export default {
   name: 'app',
   components: {
-    // RobotBuilder,
-    SearchComponent,
+    RobotBuilder,
+    // SearchComponent,
   },
 };
 </script>
