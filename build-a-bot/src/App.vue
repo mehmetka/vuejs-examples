@@ -6,6 +6,7 @@
           <img class="logo" src="./assets/build-a-bot-logo.png" alt=""/> Build-a-bot
         </li>
         User: {{userName}}
+        <button @click="changeUsername()">Change</button>
       </ul>
     </nav>
   </header>
@@ -31,6 +32,12 @@ export default {
   provide() {
     return { userName: this.userName };
   },
+  methods: {
+    changeUserName() {
+      this.userName = 'Fred'; // Won't affect all of the userName.
+      // userName property is not reactive.
+    }
+  }
 };
 </script>
 
