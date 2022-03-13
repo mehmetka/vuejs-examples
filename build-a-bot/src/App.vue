@@ -26,10 +26,10 @@ export default {
     // SearchComponent,
   },
   data() {
-    return { userName: 'Jim' };
+    return { userName: 'John' };
   },
-  provide: {
-    userName: 'John',
+  provide() {
+    return { userName: this.userName };
   },
 };
 </script>
