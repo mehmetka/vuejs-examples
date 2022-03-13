@@ -1,6 +1,6 @@
 <template>
   <div class="part" :class="position">
-    <div>Username: {{userName}}</div>
+    <div>Username: {{user.userName}}</div>
     <img :src="selectedPart.src" @click="showPartInfo = !showPartInfo" title="arm" alt=""/>
     <button @click="selectPreviousPart()" class="prev-selector"></button>
     <button @click="selectNextPart()" class="next-selector"></button>
@@ -26,7 +26,7 @@ function getNextValidIndex(index, length) {
   return incrementedIndex > length - 1 ? 0 : incrementedIndex;
 }
 export default {
-  inject: ['userName'],
+  inject: ['user'],
   props: {
     parts: {
       type: Array,

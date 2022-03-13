@@ -5,8 +5,8 @@
         <li class="nav-item">
           <img class="logo" src="./assets/build-a-bot-logo.png" alt=""/> Build-a-bot
         </li>
-        User: {{userName}}
-        <button @click="changeUsername()">Change</button>
+        User: {{user.userName}}
+        <button @click="changeUserName()">Change</button>
       </ul>
     </nav>
   </header>
@@ -27,14 +27,16 @@ export default {
     // SearchComponent,
   },
   data() {
-    return { userName: 'John' };
+    return {
+      user: { userName: 'John' },
+    };
   },
   provide() {
-    return { userName: this.userName };
+    return { user: this.user };
   },
   methods: {
     changeUserName() {
-      this.userName = 'Fred'; // Won't affect all of the userName.
+      this.user.userName = 'Fred'; // Won't affect all of the userName.
       // userName property is not reactive.
     }
   }
