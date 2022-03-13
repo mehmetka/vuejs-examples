@@ -25,6 +25,12 @@ export default {
     RobotBuilder,
     // SearchComponent,
   },
+  data() {
+    return { userName: 'Jim' };
+  },
+  provide: {
+    userName: 'John',
+  },
 };
 </script>
 
